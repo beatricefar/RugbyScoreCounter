@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.beatricefarias.rugbyscorecounter.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--Logo and separators-->
+        <ImageView
+            style="@style/Logo"
+            android:contentDescription="@string/logoContentDescription"
+            android:src="@drawable/rugby_logo" />
+
+        <View style="@style/Divider" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="5">
+
+            <!--Scores-->
+            <TextView
+                android:id="@+id/teamAScore"
+                style="@style/Score" />
+
+            <android.support.v4.widget.Space style="@style/BlankSpace" />
+
+            <TextView
+                android:id="@+id/teamBScore"
+                style="@style/Score" />
+
+            <TextView
+                style="@style/Team"
+                android:text="@string/teamAName" />
+
+            <android.support.v4.widget.Space style="@style/BlankSpace" />
+
+            <TextView
+                style="@style/Team"
+                android:text="@string/teamBName" />
+
+            <!--Buttons and descriptions-->
+            <!--Try row-->
+            <Button
+                android:id="@+id/tryTeamA"
+                style="@style/LeftButton" />
+
+            <TextView
+                style="@style/PointInformation"
+                android:text="@string/tryPointDescription" />
+
+            <Button
+                android:id="@+id/tryTeamB"
+                style="@style/RightButton" />
+
+            <!--Goal Kick row-->
+            <Button
+                android:id="@+id/goalKickTeamA"
+                style="@style/LeftButton" />
+
+            <TextView
+                style="@style/PointInformation"
+                android:text="@string/goalKickPointDescription" />
+
+            <Button
+                android:id="@+id/goalKickTeamB"
+                style="@style/RightButton" />
+
+            <!--Penalty row-->
+            <Button
+                android:id="@+id/penaltyTeamA"
+                style="@style/LeftButton" />
+
+            <TextView
+                style="@style/PointInformation"
+                android:text="@string/penaltyPointDescription" />
+
+            <Button
+                android:id="@+id/penaltyTeamB"
+                style="@style/RightButton" />
+
+            <!--Drop Goal row-->
+            <Button
+                android:id="@+id/dropGoalTeamA"
+                style="@style/LeftButton" />
+
+            <TextView
+                style="@style/PointInformation"
+                android:text="@string/dropGoalDescription" />
+
+            <Button
+                android:id="@+id/dropGoalTeamB"
+                style="@style/RightButton" />
+
+        </GridLayout>
+
+        <!--New game button-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/resetButton"
+                style="@style/ResetButton" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
